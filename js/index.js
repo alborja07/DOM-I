@@ -91,3 +91,16 @@ visionTitle.textContent = (siteContent['main-content']['vision-h4']);
 let visionP = document.querySelectorAll('.main-content .bottom-content .text-content p')[2]
 visionP.textContent = (siteContent['main-content']['vision-content']);
 
+let contactTitle = document.querySelector('.contact h4')
+contactTitle.textContent = (siteContent['contact']['contact-h4']);
+let address = document.querySelectorAll('.contact p')[0]
+address.textContent = (siteContent['contact']['address']);
+let phone = document.querySelectorAll('.contact p')[1]
+phone.textContent = (siteContent['contact']['phone']);
+let email = document.querySelectorAll('.contact p')[2]
+email.textContent = (siteContent['contact']['email']);
+
+let footer = document.querySelector('footer')
+footer.textContent = (siteContent['footer']['copyright']);
+
+
