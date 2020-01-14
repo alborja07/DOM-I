@@ -100,7 +100,7 @@ phone.textContent = (siteContent['contact']['phone']);
 let email = document.querySelectorAll('.contact p')[2]
 email.textContent = (siteContent['contact']['email']);
 
-let footer = document.querySelector('footer')
+let footer = document.querySelector('footer p')
 footer.textContent = (siteContent['footer']['copyright']);
 
 
@@ -109,3 +109,21 @@ navColor.forEach( element => {
   element.style.color = "green"
 })
 
+const newNav = document.createElement('a')
+newNav.textContent = "New Nav 1";
+// newNav.classList.add('nav a')
+const newItem = document.querySelector('nav');
+newItem.appendChild(newNav)
+newNav.style.color = 'green';
+
+const newNav2 = document.createElement('a')
+newNav2.textContent = "New Nav A";
+const newItem2 = document.querySelector('nav');
+newItem2.prepend(newNav2)
+newNav2.style.color = 'green';
+
+
+// let newitemappend = document.querySelector('nav');
+// let newItems = document.createElement('a');
+// newItems.textContent = "Sign Up";
+// newItems.style.color = 'green';
