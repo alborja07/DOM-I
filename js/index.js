@@ -104,3 +104,8 @@ let footer = document.querySelector('footer')
 footer.textContent = (siteContent['footer']['copyright']);
 
 
+const navColor = document.querySelectorAll('a')
+navColor.forEach( element => {
+  element.style.color = "green"
+})
+
