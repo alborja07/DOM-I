@@ -44,21 +44,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let img2 = document.getElementById("cta-img");
 img2.setAttribute('src', siteContent["cta"]["img-src"]);
 
-
-let imgMid = document.getElementById("middle-img");
-imgMid.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
+// 
+// Navigation
 let anchors = document.querySelectorAll("a");
 anchors.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index += 1}`])
+//Navigation color
+const navColor = document.querySelectorAll('a')
+navColor.forEach( element => {
+  element.style.color = "green"
+})
+// adding Navigation elements
+const newNav = document.createElement('a')
+newNav.textContent = "New Nav 1";
+const newItem = document.querySelector('nav');
+newItem.appendChild(newNav)
+newNav.style.color = 'green';
 
-// let anchors = document.querySelectorAll('header nav a')
-// [0];
-// anchors.textContent = (siteContent['nav']['nav-item-1'])
-// let anchors1 = document.querySelectorAll('header nav a')
-// [1];
-// anchors1.textContent = (siteContent['nav']['nav-item-2'])
+const newNav2 = document.createElement('a')
+newNav2.textContent = "New Nav A";
+const newItem2 = document.querySelector('nav');
+newItem2.prepend(newNav2)
+newNav2.style.color = 'green';
 
-
+// 
+// "Dom is Awesome" 
+let imgMid = document.getElementById("middle-img");
+imgMid.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let title = document.querySelector('.cta-text h1')
 title.textContent = (siteContent['cta']['h1']);
@@ -66,6 +77,8 @@ title.textContent = (siteContent['cta']['h1']);
 let titleButton = document.querySelector('button')
 titleButton.textContent = (siteContent['cta']['button']);
 
+// 
+// page content
 let featTitle = document.querySelectorAll('.main-content .top-content .text-content h4')[0]
 featTitle.textContent = (siteContent['main-content']['features-h4']);
 let featP = document.querySelectorAll('.top-content p')[0]
@@ -91,6 +104,8 @@ visionTitle.textContent = (siteContent['main-content']['vision-h4']);
 let visionP = document.querySelectorAll('.main-content .bottom-content .text-content p')[2]
 visionP.textContent = (siteContent['main-content']['vision-content']);
 
+// 
+// Contact
 let contactTitle = document.querySelector('.contact h4')
 contactTitle.textContent = (siteContent['contact']['contact-h4']);
 let address = document.querySelectorAll('.contact p')[0]
@@ -100,30 +115,9 @@ phone.textContent = (siteContent['contact']['phone']);
 let email = document.querySelectorAll('.contact p')[2]
 email.textContent = (siteContent['contact']['email']);
 
+// 
+// copyright
 let footer = document.querySelector('footer p')
 footer.textContent = (siteContent['footer']['copyright']);
 
 
-const navColor = document.querySelectorAll('a')
-navColor.forEach( element => {
-  element.style.color = "green"
-})
-
-const newNav = document.createElement('a')
-newNav.textContent = "New Nav 1";
-// newNav.classList.add('nav a')
-const newItem = document.querySelector('nav');
-newItem.appendChild(newNav)
-newNav.style.color = 'green';
-
-const newNav2 = document.createElement('a')
-newNav2.textContent = "New Nav A";
-const newItem2 = document.querySelector('nav');
-newItem2.prepend(newNav2)
-newNav2.style.color = 'green';
-
-
-// let newitemappend = document.querySelector('nav');
-// let newItems = document.createElement('a');
-// newItems.textContent = "Sign Up";
-// newItems.style.color = 'green';
